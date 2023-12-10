@@ -24,7 +24,36 @@ namespace gui_testerino
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nice Job!");
+            DialogResult dr = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                this.Close ();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Input Username here", "Username");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Input Password here", "Password");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Select Gender", "Gender");
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            button1.Enabled = checkBox1.Checked;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
